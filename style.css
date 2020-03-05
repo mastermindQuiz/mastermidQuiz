@@ -49,9 +49,9 @@ body{
 
 #score{
     color:#90299c;
+    font-weight: bold;
     margin-right:10px;
 }
-
 
 
 #circle1{
@@ -64,6 +64,30 @@ body{
     right: 60px;
 } 
 
+<<<<<<< HEAD
+.footer{
+    background-color: coral;
+    height: 200px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+#button-next{
+    background-color:#1abdce;
+    border: 7px solid #1086a2;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-top: 50px;
+  }
+=======
 #circle2{
     background-color: #1abdce;
     width: 61px;
@@ -115,6 +139,7 @@ body{
 } 
 
 
+>>>>>>> f8dadd1e930212cfe19b58ae3430840292cc467c
 
 
 /* @media only screen and (max-width: 1366px) {
