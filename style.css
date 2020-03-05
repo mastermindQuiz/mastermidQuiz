@@ -10,6 +10,61 @@ body{
    
 }
 
+.score-section-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#score-section{
+    position: fixed;
+    height: 500px;
+    background-color: #0c3062;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    width: 500px;
+    margin-top: -271px;
+ /*    z-index: -1; */
+}
+
+#points{
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background-color: #001c4c;
+    border: 8px solid aqua;
+    color: white;
+    margin-left: 35%;
+    margin-top: 300px; 
+  } 
+
+ #points p{
+      display: flex;
+      justify-content: center;
+      margin-top: 45px;
+      font-size: 2rem;
+  }
+
+#score{
+    color:#90299c;
+    margin-right:10px;
+}
+
+
+
+#circle1{
+    background-color: #1abdce;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 209px;
+    right: 60px;
+} 
+
+
 
 /* @media only screen and (max-width: 1366px) {
     body {
@@ -27,29 +82,7 @@ body{
         overflow: hidden; */
   /*   }
   } 
- */
-  #points{
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    height: 150px;
-    width: 150px;
-    background-color: #001c4c;
-    border: 8px solid aqua;
-    color: white;
-    margin-left: 685px;
-    margin-top: 20px;
-   
-    
-    
-  }
-#points p{
-      display: flex;
-      justify-content: center;
-      margin-top: 45px;
-      font-size: 2rem;
-  }
-
+ 
   #question p{
     display: flex;
     justify-content: center;
@@ -59,10 +92,7 @@ body{
   }
 
 
-  #answer{
-    margin: 100px;
-}
-
+ 
   #answer button{
     background-color:#90299c;
     border:none;
@@ -83,7 +113,6 @@ body{
     background-color:#1abdce;
     border: 7px solid #1086a2;
     color: white;
-    padding: 10px 100px 10px 100px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -92,49 +121,57 @@ body{
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 30px;
-    margin-left: 500px;
     margin-top: 50px;
   }
 
 
-
-
-nav{
-    width: 100%;
-}
-  
-  nav .circles{
-      display: flex;
-      padding-right: 0;
-      padding-left: 0;
-     /*  border-radius: 50%;
-      height: 150px;
-      width: 150px;
-      background-color:#0c3062; */
-  }
   #circle1{
     height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #1abdce;
+    top: -25px;
+    left: 50px; */
+
+
+    /* height: 45px;
     width: 90px;
     border-bottom-left-radius: 20vh;
     border-bottom-right-radius: 20vh;
     background-color:#1abdce;
     margin-left: 50px;
-    margin-bottom: 100px;
-  }
+    margin-bottom: 100px; */
+  /* }
+ */
+  
 
 
-  #circle2{
+
+
+
+  /* #circle2{
     height: 150px;
+    width: 150px;
+    background-color: #1abdce;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: -70px; */
+
+
+
+   /*  height: 150px;
     width: 150px;
     border-radius: 0 0 0 40vh;
     background-color:#1abdce;
-    margin-left: 1250px;
+    margin-left: 1250px; */
 
-  }
+ /*  }
   
   #background-circle{
     height: 387px;
-    width: 1550px; 
+    width: 100%; 
     border-radius: 50% /0 0 100% 100% ;
     background-color:#0c3062;
     position: absolute;
@@ -151,4 +188,4 @@ nav{
         background-color:#1abdce;
         margin-top: 10px;
     
-  }
+  } */
