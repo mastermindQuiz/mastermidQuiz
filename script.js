@@ -1,46 +1,30 @@
+// Objeto plantilla
+let selectedObject = []
 
-let question = [];
-let answer = [];
-let correctAnswer =[];
-let numberOfQuestions
 
-fetch ('preguntas.json')
-.then (response => response.json())
-.then((responseJson) => {
-    
-   
-        responseJson.map((elemento)=>{
-            question.push(elemento.pregunta);
-            answer.push(elemento.incorrecta);
-            correctAnswer.push(elemento.correcta);
-            
-        })
+fetch('preguntas.json')
+    .then(response => response.json())
+    .then((responseJson) => {
+
+        let jsonObjects = responseJson
+        let numberOfQuestions = jsonObjects.length - 1;
+
+        // funcion que selecciona un numero al azar desde 0 hasta el numero de preguntas que tengamos
+        getRandomNumber = () => {
+            let randomNumber = Math.floor(Math.random() * numberOfQuestions)
+            pushObject(randomNumber)
+        }
+        // Metemos en selectedObject el objeto de indice de randomNumber.
+        pushObject = (patata) => {
+            selectedObject.push(jsonObjects[patata])
+        }
         
 
-            
-            numberOfQuestions = question.length - 1;
 
-            let randomNumber = Math.floor(Math.random()* numberOfQuestions)
-            console.log(randomNumber)
-
- 
-
-
-
-
-
-
-
-
-        
-    
     })
-.catch(error => console.log(error))
+    .catch(error => console.log(error))
+
 
 // $.getJSON("./preguntas.json", function (json) {
 //     console.log(json); // this will show the info it in firebug console
 // });
-
-
-
-
