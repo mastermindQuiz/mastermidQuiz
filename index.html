@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <nav>
 
@@ -16,8 +19,14 @@
             <div id="circle2"></div>
             <div id="circle3"></div>
         </div>
-        
- </nav>
+
+    </nav>
+    <section id="startButton" onclick="start()">
+        <button>EMPEZAR!</button>
+    </section>
+    <section id="totalQuestions">
+        <p> 0/10</p>
+    </section>
     <section id="points">
         <p>0 Pts</p>
     </section>
@@ -25,20 +34,81 @@
 
     </section>
     <section id="answer">
-       
+
     </section>
     <section id="skip">
-        <button id="button-next" onclick="start()">Siguiente pregunta</button>
+        <button id="button-next" onclick="showModalSkipQuestion()">Siguiente pregunta</button>
+    </section>
+
+    <!--FINAL Modal -->
+    <section id="modalFinalGame">
+        <!-- Button trigger modal -->
+        <button id="modalBoton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Launch demo modal
+        </button>
+        <!--Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">¡Enhorabuena!</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p id="puntuacionTotal">Tienes una puntuacion de</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="location.reload()" type="button" class="btn btn-secondary"
+                            data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--SKIP QUESTION Modal -->
+    <section id="skipQuestion">
+        <!-- Button trigger modal -->
+        <button id="skipQuestionButton" type="button" class="btn btn-primary" data-toggle="modal"
+            data-target="#skipQuestionModal">
+            Launch demo modal
+        </button>
+        <!--Modal -->
+        <div class="modal fade" id="skipQuestionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="skipQuestionModalLabel">¿Seguro?</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p>Saltar la pregunta cuesta 2 puntos. ¿Quieres pagarlos?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="" type="button" class="btn btn-secondary" data-dismiss="modal">Volver</button>
+                        <button onclick="" type="button" class="btn btn-secondary" data-dismiss="modal">Sí</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
         <div id="circle4"></div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
     <script src="script.js"></script>
 </body>
+
 </html>

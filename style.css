@@ -152,3 +152,14 @@ nav{
         margin-top: 10px;
     
   }
+
+
+
+
+  #modalBoton {
+    display: none;
+  }
+  
+  #skipQuestionButton {
+    display: none;
+  }

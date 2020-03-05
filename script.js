@@ -1,35 +1,44 @@
 // Objeto plantilla
 let selectedObject = [];
 let score = 0;
+let questionNumber = 0;
 
 fetch('preguntas.json')
     .then(response => response.json())
     .then((responseJson) => {
 
         let jsonObjects = responseJson;
-        let numberOfQuestions = jsonObjects.length - 1;
 
-        // Empezamos
+        // Empezamos. Cuando se hagan 10 preguntas se acaba el juego
         start = () => {
             selectedObject = [];
             document.getElementById("question").innerHTML = "";
             document.getElementById("answer").innerHTML = "";
+            document.getElementById("startButton").style.display = "none";
             getRandomNumber();
+            if (questionNumber < 10) {
+                questionNumber = questionNumber + 1;
+            } else {
+                console.log("El juego ha terminado...MODAL")
+                showModal()
+            }
         }
 
-        let randomNumber;
         // funcion que selecciona un numero al azar desde 0 hasta el numero de preguntas que tengamos
+        let randomNumber;
         getRandomNumber = () => {
-            randomNumber = Math.floor(Math.random() * numberOfQuestions);
+            randomNumber = Math.floor(Math.random() * (jsonObjects.length - 1));
             pushObject(randomNumber);
         }
+
         // Metemos en selectedObject el objeto de indice de randomNumber.
         pushObject = (data) => {
             selectedObject.push(jsonObjects[data]);
-            jsonObjects.splice(data, 1);
             selectedObject.respuestas = [selectedObject[0].correcta, ...selectedObject[0].incorrecta];
+            jsonObjects.splice(data, 1);
             showInfo();
         }
+
         // Pintamos la informacion en el html
         showInfo = () => {
             document.getElementById("question").innerHTML += "<p>" + selectedObject[0].pregunta + "</p>"
@@ -37,23 +46,31 @@ fetch('preguntas.json')
                 document.getElementById("answer").innerHTML += "<button id=" + index + " onclick='compareAnswer(this)'>" + element + "</button>"
             });
         }
-        //Comparamos el contenido del boton seleccionado con la respuesta correcta
+        //Comparamos el contenido del boton seleccionado con la respuesta correcta e incorrecta. Sumamos/restamos puntos
         compareAnswer = (e) => {
             let respuesta = e.innerHTML
             if (respuesta === selectedObject[0].correcta) {
                 score += 10;
-                document.getElementById("points").innerHTML = "<p>"+score +" pts"+"</p>"
-                console.log(score)
+                document.getElementById("points").innerHTML = "<p>" + score + " pts" + "</p>"
+                start();
+                
                 console.log("modal CORRECTO!");
             } else {
                 if (score > 0) {
                     score += -2;
-                     document.getElementById("points").innerHTML = "<p>" + score + " pts" + "</p>"
+                    document.getElementById("points").innerHTML = "<p>" + score + " pts" + "</p>"
                 } else {}
-                console.log(score)
                 e.style.display = "none";
             }
         }
 
+        showModal=()=>{
+            document.getElementById("modalBoton").click();
+        }
+
+        showModalSkipQuestion=()=>{
+            document.getElementById("skipQuestion").style.display = "inline-block";
+        }
+        
     })
     .catch(error => console.log(error))
