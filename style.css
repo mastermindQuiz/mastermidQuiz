@@ -64,7 +64,6 @@ body{
     right: 60px;
 } 
 
-<<<<<<< HEAD
 .footer{
     background-color: coral;
     height: 200px;
@@ -87,7 +86,6 @@ body{
     border-radius: 30px;
     margin-top: 50px;
   }
-=======
 #circle2{
     background-color: #1abdce;
     width: 61px;
@@ -139,7 +137,6 @@ body{
 } 
 
 
->>>>>>> f8dadd1e930212cfe19b58ae3430840292cc467c
 
 
 /* @media only screen and (max-width: 1366px) {
