@@ -75,13 +75,43 @@ body{
 } 
 
 #circle3{
-  background-color: ;
-  width: 61px;
-  height: 89px;
+    background-color: #90299c;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: absolute;
+    top: 284px;
+    right: 163px;
+} 
+
+#circle4{
+  background-color: #90299c ;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   position: absolute;
-  top: 199px;
-  left: 101px;
+  top: 345px;
+  right: 149px;
+} 
+
+#circle5{
+  background-color: #90299c;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 280px;
+  left: 219px;
+} 
+
+#circle6{
+  background-color: #90299c ;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  position: absolute;
+  top: 345px;
+  right: 149px;
 } 
 
 
