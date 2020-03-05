@@ -1,0 +1,95 @@
+[
+    {
+      "pregunta": "¿Cuál es el nombre de una famosa ópera de Bizet?",
+      "incorrecta": ["Cecilia","Isabel","Alejandra","Hermenegilda","Carla"],
+      "correcta": "Carmen"
+    },
+    
+    {
+      "pregunta": "Greta Thunberg nació en:",
+      "incorrecta": ["Marte","Suiza","Oslo","Noruega","Amsterdam"],
+      "correcta": "Estocolmo"
+    },
+    
+    {
+      "pregunta": "¿Qué día es el Día Internacional de la Mujer?",
+      "incorrecta": ["31 de febrero","6 de enero","15 de octubre","30 noviembre","6 de agosto"],
+      "correcta": "8 de marzo"
+    },
+    
+    {
+      "pregunta": "El volumen de pensiones voluntarias antes de la edad legal ha crecido un...",
+      "incorrecta": ["40%","80%","4%","15%","100%, this is Spain"],
+      "correcta": "66%"
+    },
+    
+    {
+      "pregunta": "¿Cuántas posibilidades distintas de melodías ha creado el algoritmo realizado por un músico y un programador para evitar demandas por plagios?",
+      "incorrecta": ["3 millones","5 posibilidades","32 millones","14 millones","59 millones"],
+      "correcta": "68.000 millones"
+    },
+    
+    {
+      "pregunta": "Según un nuevo estudio, ¿qué puede detectar una nariz de perro?",
+      "incorrecta": ["Vibración", "Sonido", "Enfermedad", "Ladrones", "Oro"],
+      "correcta": "Calor"
+    },
+    
+    {
+      "pregunta": "¿Qué nueva ley presentará el gobierno estatal la próxima semana?",
+      "incorrecta": ["Ley de Transparencia", "Ley de Newton", "Ley de violencia de género", "Ley de Educación LOMLOE", "Ley de Protección de Datos"],
+      "correcta": "Ley de Libertad Sexual"
+    },
+    
+    {
+      "pregunta": "¿Por qué se está investigando a Puigdemont?",
+      "incorrecta": ["Por viajar de forma secreta a Bruselas", "Convocar elecciones autonómicas anticipadas", "Participar en la fiesta popular de la Quema del Judas","Por declarar la independencia","Por el contrabando de calçots"],
+      "correcta": "Por usar dinero de aguas de Girona de manera irregular"
+    },
+    
+    {
+      "pregunta": "¿Cuánto tiempo ha tardado una mujer en darse cuenta de que estaba cuidando una planta artificial?",
+      "incorrecta": ["3 días","15 días", "6 meses", "5 años", "20 minutos"],
+      "correcta": "2 años"
+    },
+    
+    {
+      "pregunta": "¿De qué color va a ser el nuevo pasaporte de Reino Unido?",
+      "incorrecta": ["Rojo","Amarillo chillón", "Verde ", "Morado", "Naranja"],
+      "correcta": "Azul marino"
+    },
+    
+    {
+      "pregunta": "¿Cuánto dinero tiene que pagar Apple después de perder una demanda colectiva en EEUU?",
+      "incorrecta": ["50 millones","1 millones", "200 millones", "5 millones", "10 iphones"],
+      "correcta": "500 millones"
+    },
+    
+    {
+      "pregunta": "¿Qué volcán ha cruzado sobre una cuerda un acróbata?",
+      "incorrecta": ["Etna", "Monte Fuji", "Kilimanjaro", "Semeru", "Pico del Teide"],
+      "correcta": "Masaya"
+    },
+    
+    {
+      "pregunta": "¿Donde esta actualmente la mayor exposición de Rafael, el genio de Urbino?",
+      "incorrecta": ["En Berlin", "En Francia", "En Londres", "En China", "¿...de quién?"],
+      "correcta": "En Roma"
+    },
+    
+    {
+      "pregunta": "Maria Sharápova ha anunciado recientemente su retiro del tenis. ¿De qué país es?",
+      "incorrecta": ["Finlandia", "Italia", "Escocia", "Suecia", "Sharápova no se dedica al tenis"],
+      "correcta": "Rusia"
+    },
+    
+    {
+      "pregunta": "¿Cual es la noticia más buscada últimamente?",
+      "incorrecta": ["La isla de las tentaciones", "La feria de videojuegos E3", "Greta y el cambio climático", "Rosalia", "Las fallas"],
+      "correcta": "Coronavirus"
+    }
+
+]
+    
+    
+    
