@@ -65,27 +65,30 @@ body{
 } 
 
 .footer{
-    background-color: coral;
-    height: 200px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
 
-
 #button-next{
-    background-color:#1abdce;
-    border: 7px solid #1086a2;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.8rem;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 30px;
-    margin-top: 50px;
-  }
+  background-color: #1ABDCE;
+  border: 3px solid #1086A2;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 30px;
+  margin-bottom: 69px;
+  z-index: 9;
+}
+
 #circle2{
     background-color: #1abdce;
     width: 61px;
@@ -127,138 +130,298 @@ body{
 } 
 
 #circle6{
-  background-color: #90299c ;
+  background-color: #1abdce;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  position: absolute;
+  top: 327px;
+  right: 104px;
+} 
+
+#circle7{
+  background-color: #1abdce;
   width: 9px;
   height: 9px;
   border-radius: 50%;
   position: absolute;
-  top: 345px;
-  right: 149px;
+  top: 299px;
+  left: 167px;
 } 
 
-
-
-
-/* @media only screen and (max-width: 1366px) {
-    body {
-        background-color: pink;
-       
-    }
-  }  */
-/* 
-@media only screen and (max-width: 600px) {
-    body {
-        background-color: blueviolet; */
-        /* background: url(https://s5.gifyu.com/images/practice-background774448d467a20f99.png) no-repeat center center fixed;
-        background-size: cover;
-        height: 100%;
-        overflow: hidden; */
-  /*   }
-  } 
- 
-  #question p{
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
-    color: white;
-    font-size: 1.8rem;
-  }
-
-
- 
-  #answer button{
-    background-color:#90299c;
-    border:none;
-    color: white;
-    padding: 10px 100px 10px 100px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 30px;
-    font-size: 1.5rem;
-  }
-
-
-  #button-next{
-    background-color:#1abdce;
-    border: 7px solid #1086a2;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 30px;
-    margin-top: 50px;
-  }
-
-
-  #circle1{
-    height: 45px;
-    width: 45px;
+#circle8{
+  background-color: #90299c;
+    width: 9px;
+    height: 9px;
     border-radius: 50%;
     position: absolute;
-    background-color: #1abdce;
-    top: -25px;
-    left: 50px; */
+    top: 318px;
+    left: 114px;
+} 
 
+#total-questions{
+  color: white;
+  position: relative;
+  align-items: center;
+}
 
-    /* height: 45px;
-    width: 90px;
-    border-bottom-left-radius: 20vh;
-    border-bottom-right-radius: 20vh;
-    background-color:#1abdce;
-    margin-left: 50px;
-    margin-bottom: 100px; */
-  /* }
- */
+#question{
+  color: white;
+    margin-top: 220px;
+    text-align: center;
   
+}
 
+#answers button{
+    background-color: #90299c;
+    width: 100px;
+    height: 50px;
+    border-style: none;
+    border-radius: 10px;
+    color: white;
+    display: block;
+    margin: 0 7px;
 
+}
 
-
-
-  /* #circle2{
-    height: 150px;
-    width: 150px;
-    background-color: #1abdce;
-    border-radius: 50%;
-    position: absolute;
-    right: 10px;
-    top: -70px; */
-
-
-
-   /*  height: 150px;
-    width: 150px;
-    border-radius: 0 0 0 40vh;
-    background-color:#1abdce;
-    margin-left: 1250px; */
-
- /*  }
-  
-  #background-circle{
-    height: 387px;
-    width: 100%; 
-    border-radius: 50% /0 0 100% 100% ;
-    background-color:#0c3062;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: -1;
-  }
-
-  footer #circle4{
-  
-        height: 150px;
-        width: 150px;
-        border-radius:  0  40vh 0  0 ;
-        background-color:#1abdce;
-        margin-top: 10px;
+#answers{
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
     
-  } */
+}
+
+/* Footer circles */
+#circle9{
+  background-color: #1ABDCE;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  left: -38px;
+} 
+#circle10{
+  background-color: #1ABDCE;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  top: 64px;
+  left: 142px;
+} 
+#circle11{
+  background-color: #1ABDCE;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  position: absolute;
+  top: 44px;
+  left: 260px;
+} 
+#circle12{
+  background-color: #0C3062;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 49px;
+  left: 199px;
+} 
+#circle13{
+  background-color: #0C3062;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 64px;
+  left: 297px;
+} 
+#circle14{
+  background-color: #0C3062;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 55px;
+  left: 110px;
+} 
+#circle15{
+  background-color: #0C3062;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 55px;
+  left: 85px;
+} 
+#circle16{
+  background-color: #90299C;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  position: absolute;
+  top: 35px;
+  left: 79px;
+} 
+#circle17{
+  background-color: #90299C;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  position: absolute;
+  top: 42px;
+  left: 180px;
+} 
+#circle18{
+  background-color: #90299C;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: 7px;
+  left: 247px;
+} 
+#circle19{
+  background-color: #0C3062;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  left: 64px;
+} 
+#circle20{
+  background-color: #90299C;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: -9px;
+  left: 74px;
+} 
+#circle21{
+  background-color: #1ABDCE;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 28px;
+  left: 221px;
+}
+@media (min-width: 1025px) {
+  #circle24{
+      background-color: #1ABDCE;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      position: absolute;
+      top: 60px;
+      right: 110px;
+  } 
+  
+  
+  #circle25{
+      background-color: #90299C;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      position: absolute;
+      top: 36px;
+      right: 450px;
+  } 
+  
+  #circle26{
+      background-color: #0C3062;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      position: absolute;
+      top: 39px;
+      right: 350px;
+  } 
+  
+  #circle27{
+      background-color: #1ABDCE;
+      width: 23px;
+      height: 23px;
+      border-radius: 50%;
+      position: absolute;
+      top: 55px;
+      right: 300px;
+  } 
+  
+  #circle28{
+      background-color: #0C3062;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      position: absolute;
+      top: 65px;
+      right: 200px;
+  } 
+  
+  #circle29{
+      background-color: #1ABDCE;
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      position: absolute;
+      top: 33px;
+      right: -19px;
+  } 
+  
+  
+  #circle30{
+      background-color: #0C3062;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: absolute;
+      top: 35px;
+      right: 190px;
+  } 
+  
+  #circle31{
+      background-color: #90299C;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      position: absolute;
+      top: 35px;
+      right: 250px;
+  } 
+  
+  #circle32{
+      background-color: #90299C;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      position: absolute;
+      top: 23px;
+      right: 150px;
+  } 
+  
+  #circle33{
+      background-color: #90299C;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      position: absolute;
+      top: -7px;
+      right: 100px;
+  } 
+  #circle34{
+      background-color: #1ABDCE;
+      width: 6px;
+      height: 7px;
+      border-radius: 50%;
+      position: absolute;
+      top: 19px;
+      right: 120px;
+  } 
+}
+
+
