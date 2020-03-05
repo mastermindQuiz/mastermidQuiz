@@ -64,6 +64,27 @@ body{
     right: 60px;
 } 
 
+#circle2{
+    background-color: #1abdce;
+    width: 61px;
+    height: 89px;
+    border-radius: 50%;
+    position: absolute;
+    top: 199px;
+    left: 101px;
+} 
+
+#circle3{
+  background-color: ;
+  width: 61px;
+  height: 89px;
+  border-radius: 50%;
+  position: absolute;
+  top: 199px;
+  left: 101px;
+} 
+
+
 
 
 /* @media only screen and (max-width: 1366px) {
