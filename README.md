@@ -1,1 +1,1 @@
-# mastermidQuiz
+# mastermindQuiz
