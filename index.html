@@ -14,7 +14,7 @@
     <div class="score-section-container">
         <div id="score-section">
             <div id="points">
-                <p> <span id="score"> </span> pts</p>
+                <p> <span id="score"> 0 </span> pts</p>
             </div>
 
             <div id="circle1"></div>
@@ -28,28 +28,21 @@
         </div>
     </div>
 
-    <!-- <section id="startButton" onclick="start()">
-        <button>EMPEZAR!</button>
-    </section> -->
+    <button id="startButton" onclick="start()">EMPEZAR!</button>
 
+    <!-- pregunta -->
+    <div id="question">
+    </div>
+    <!-- Todas las respuestas -->
+    <div id="answer">
+    </div>
     <div id="total-questions">
         <p>Pregunta 0/10</p>
     </div>
 
-    <div id="question">
-        <p>This is a question</p>
-    </div>
-
-    <div id="answers">
-        <button id="answer1">Respuesta 1</button>
-        <button>Respuesta 2</button>
-        <button>Respuesta 3</button>
-        <button>Respuesta 4</button>
-        <button>Respuesta 5</button>
-    </div>
-
     <div class="footer">
-        <button id="button-next" onclick="start()">Siguiente pregunta</button>
+
+        <button id="button-next" onclick="showModalSkipQuestion()">Siguiente pregunta</button>
         <div id="circle9"></div>
         <div id="circle10"></div>
         <div id="circle11"></div>
@@ -123,18 +116,15 @@
                         <p>Saltar la pregunta cuesta 2 puntos. ¿Quieres pagarlos?</p>
                     </div>
                     <div class="modal-footer">
-                        <button onclick="" type="button" class="btn btn-secondary" data-dismiss="modal">Volver</button>
-                        <button onclick="" type="button" class="btn btn-secondary" data-dismiss="modal">Sí</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Volver</button>
+                        <button onclick="payPoints()" type="button" class="btn btn-secondary"
+                            data-dismiss="modal">Sí</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 </body>
-
-<footer>
-    <div id="circle4"></div>
-</footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>

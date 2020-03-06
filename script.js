@@ -42,6 +42,7 @@ fetch('preguntas.json')
         // Pintamos la informacion en el html
         showInfo = () => {
             document.getElementById("question").innerHTML += "<p>" + selectedObject[0].pregunta + "</p>"
+            console.log(selectedObject[0].pregunta)
             selectedObject.respuestas.forEach((element, index) => {
                 document.getElementById("answer").innerHTML += "<button id=" + index + " onclick='compareAnswer(this)'>" + element + "</button>"
             });
@@ -51,9 +52,9 @@ fetch('preguntas.json')
             let respuesta = e.innerHTML
             if (respuesta === selectedObject[0].correcta) {
                 score += 10;
-                document.getElementById("points").innerHTML = "<p>" + score + " pts" + "</p>"
+                document.getElementById("points").innerHTML = '<p><span id ="score">' + score + "</span> pts</p>"
                 start();
-                
+
                 console.log("modal CORRECTO!");
             } else {
                 if (score > 0) {
@@ -64,13 +65,21 @@ fetch('preguntas.json')
             }
         }
 
-        showModal=()=>{
+        showModal = () => {
             document.getElementById("modalBoton").click();
         }
 
-        showModalSkipQuestion=()=>{
-            document.getElementById("skipQuestion").style.display = "inline-block";
+        showModalSkipQuestion = () => {
+            document.getElementById("skipQuestionButton").click();
         }
-        
+
+        payPoints = () => {
+            start();
+            if (score > 0) {
+                score += -2;
+            }
+            document.getElementById("points").innerHTML = "<p>" + score + " pts" + "</p>"
+        }
+
     })
     .catch(error => console.log(error))

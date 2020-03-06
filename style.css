@@ -53,7 +53,6 @@ body{
     margin-right:10px;
 }
 
-
 #circle1{
     background-color: #1abdce;
     width: 100px;
@@ -87,6 +86,33 @@ body{
   border-radius: 30px;
   margin-bottom: 69px;
   z-index: 9;
+}
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 0 0 0 0px #91299c73;
+  }
+
+  100% {
+    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+  }
+}
+#startButton{
+  background-color: #1ABDCE;
+  border: 3px solid #1086A2;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 30px;
+  position: absolute;
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  padding: 26px;
+   animation: shadow-pulse 1s infinite;
 }
 
 #circle2{
@@ -161,8 +187,10 @@ body{
 
 #total-questions{
   color: white;
-  position: relative;
-  align-items: center;
+  position: absolute;
+  left: 50vw;
+  bottom: 11%;
+  transform: translate(-50%, -50%);
 }
 
 #question{
@@ -172,10 +200,10 @@ body{
   
 }
 
-#answers button{
+#answer button{
     background-color: #90299c;
-    width: 100px;
-    height: 50px;
+    /* width: 100px;*/
+    height: 30px; 
     border-style: none;
     border-radius: 10px;
     color: white;
@@ -184,8 +212,8 @@ body{
 
 }
 
-#answers{
-  height: 30vh;
+#answer{
+  height: 39vh;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -311,7 +339,19 @@ body{
   top: 28px;
   left: 221px;
 }
-@media (min-width: 1025px) {
+
+#modalBoton {
+  display: none;
+}
+
+#skipQuestionButton {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  #answer{
+    height: 54vh;
+  }
   #circle24{
       background-color: #1ABDCE;
       width: 38px;
@@ -321,14 +361,6 @@ body{
       top: 60px;
       right: 110px;
   } 
-  
-  #modalBoton {
-    display: none;
-  }
-  
-  #skipQuestionButton {
-    display: none;
-  }
   
   #circle25{
       background-color: #90299C;
@@ -379,7 +411,6 @@ body{
       top: 33px;
       right: -19px;
   } 
-  
   
   #circle30{
       background-color: #0C3062;
