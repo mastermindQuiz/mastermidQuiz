@@ -42,12 +42,6 @@
     },
     
     {
-      "pregunta": "¿Por qué se está investigando a Puigdemont?",
-      "incorrecta": ["Por viajar de forma secreta a Bruselas", "Convocar elecciones autonómicas anticipadas", "Participar en la fiesta popular de la Quema del Judas","Por declarar la independencia","Por el contrabando de calçots"],
-      "correcta": "Por usar dinero de aguas de Girona de manera irregular"
-    },
-    
-    {
       "pregunta": "¿Cuánto tiempo ha tardado una mujer en darse cuenta de que estaba cuidando una planta artificial?",
       "incorrecta": ["3 días","15 días", "6 meses", "5 años", "20 minutos"],
       "correcta": "2 años"

@@ -1,7 +1,7 @@
 // Objeto plantilla
 let selectedObject = [];
 let score = 0;
-let questionNumber = 0;
+let questionNumber = 1;
 
 fetch('preguntas.json')
     .then(response => response.json())
@@ -15,11 +15,13 @@ fetch('preguntas.json')
             document.getElementById("question").innerHTML = "";
             document.getElementById("answer").innerHTML = "";
             document.getElementById("startButton").style.display = "none";
+            document.getElementById("button-next").style.display = "inline-block";
             getRandomNumber();
-            if (questionNumber < 10) {
+            document.getElementById("total-questions").innerHTML = "Pregunta" + questionNumber + "/10";
+            if (questionNumber <= 10) {
                 questionNumber = questionNumber + 1;
             } else {
-                console.log("El juego ha terminado...MODAL")
+                document.getElementById("puntuacionTotal").innerHTML = "Tienes una puntuacion de " + score;
                 showModal()
             }
         }
@@ -30,11 +32,23 @@ fetch('preguntas.json')
             randomNumber = Math.floor(Math.random() * (jsonObjects.length - 1));
             pushObject(randomNumber);
         }
+        shuffle=(array)=>{
+            let currentIndex = array.length, temporaryValue, randomIndex;
+            while(0 !== currentIndex){
+                randomIndex = Math.floor(Math.random()*currentIndex);
+                currentIndex -= 1;
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+            return array;
+        }
 
         // Metemos en selectedObject el objeto de indice de randomNumber.
         pushObject = (data) => {
             selectedObject.push(jsonObjects[data]);
             selectedObject.respuestas = [selectedObject[0].correcta, ...selectedObject[0].incorrecta];
+            shuffle(selectedObject.respuestas)
             jsonObjects.splice(data, 1);
             showInfo();
         }
@@ -51,11 +65,14 @@ fetch('preguntas.json')
         compareAnswer = (e) => {
             let respuesta = e.innerHTML
             if (respuesta === selectedObject[0].correcta) {
+                confetti.start()
+                setTimeout(()=>{
+                confetti.stop()
+                },2000)
                 score += 10;
                 document.getElementById("points").innerHTML = '<p><span id ="score">' + score + "</span> pts</p>"
                 start();
 
-                console.log("modal CORRECTO!");
             } else {
                 if (score > 0) {
                     score += -2;
@@ -71,6 +88,7 @@ fetch('preguntas.json')
 
         showModalSkipQuestion = () => {
             document.getElementById("skipQuestionButton").click();
+            animateButton()
         }
 
         payPoints = () => {
