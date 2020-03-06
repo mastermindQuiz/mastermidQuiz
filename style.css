@@ -463,3 +463,57 @@ body{
 }
 
 
+/* Modal */
+
+.modal-header{
+    justify-content: center;
+    border-bottom: none;
+}
+
+.modal-footer{
+    border-top: none;
+    margin-top: -5%;
+}
+
+.modal-title{
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: #001c4c;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.modal-body p{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: #001c4c;
+    /* font-weight: bold; */
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+#puntuacionTotal{
+    text-align: center;
+}
+
+img{
+    width: 30%;
+    height: 30%;
+    margin-left: 178px;
+    margin-top: -4%;
+}
+
+
+
+.btn-secondary {
+    color: #fff;
+    background-color: #1ABDCE;
+    border-color: #1ABDCE;
+}
+
+.btn-secondary:hover {
+    background-color: #90299C;
+    border-color: #90299C;
+  } 
