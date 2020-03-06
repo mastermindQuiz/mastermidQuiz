@@ -363,7 +363,7 @@ body {
   display: none;
 }
 
-@media(max-width: 426px) {
+/* @media(max-width: 426px) {
   #answer {
     font-size: smaller;
   }
@@ -371,7 +371,7 @@ body {
   #question {
     font-size: smaller;
   }
-}
+} */
 
 @media (min-width: 1024px) {
   #answer {
@@ -520,7 +520,6 @@ body {
   margin-bottom: 20px;
   line-height: 1.5;
   color: #001c4c;
-  /* font-weight: bold; */
   font-size: 1.2rem;
 }
 
@@ -549,8 +548,6 @@ img {
   position: absolute;
   top: 7%;
   right: 8%;
-  /* animation: fadeinout 8s linear forwards;
-  transition-delay: 2s; */
   animation: bounceIn 3s ease-in-out ;
 }
 @keyframes bounceIn {
@@ -566,10 +563,7 @@ img {
     transform: scale(01);
   }
   }
-/* @keyframes fadeinout{
-  0%,50%{opacity: 0;}
-  50%, 100%{opacity: 1;}
-} */
+
 #button1 {
   position: absolute;
   top:67%;
