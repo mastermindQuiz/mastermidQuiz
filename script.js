@@ -58,9 +58,11 @@ fetch('preguntas.json')
             document.getElementById("question").innerHTML += "<p>" + selectedObject[0].pregunta + "</p>"
             console.log(selectedObject[0].pregunta)
             selectedObject.respuestas.forEach((element, index) => {
-                document.getElementById("answer").innerHTML += "<button id=" + index + " onclick='compareAnswer(this)'>" + element + "</button>"
+                document.getElementById("answer").innerHTML += "<button id=button" + index + " onclick='compareAnswer(this)'>" + element + "</button>"
             });
         }
+
+       
         //Comparamos el contenido del boton seleccionado con la respuesta correcta e incorrecta. Sumamos/restamos puntos
         compareAnswer = (e) => {
             let respuesta = e.innerHTML
@@ -82,15 +84,16 @@ fetch('preguntas.json')
             }
         }
 
+        // Enseñamos modal al finalizar
         showModal = () => {
             document.getElementById("modalBoton").click();
         }
-
+        // Enseñamos modales al saltar una pregunta
         showModalSkipQuestion = () => {
             document.getElementById("skipQuestionButton").click();
             animateButton()
         }
-
+        // Si saltas una pregunta, tienes que pagar 2 puntos
         payPoints = () => {
             start();
             if (score > 0) {
@@ -98,6 +101,7 @@ fetch('preguntas.json')
             }
             document.getElementById("points").innerHTML = "<p>" + score + " pts" + "</p>"
         }
+        
 
     })
     .catch(error => console.log(error))

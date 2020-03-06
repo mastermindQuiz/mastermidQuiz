@@ -99,6 +99,7 @@ body {
 }
 
 #startButton {
+  z-index: 999;
   background-color: #1ABDCE;
   border: 3px solid #1086A2;
   color: white;
@@ -220,7 +221,7 @@ body {
   justify-content: center;
   align-items: start;
   flex-wrap: wrap;
-
+  position: relative;
 }
 
 /* Footer circles */
@@ -544,3 +545,58 @@ img {
   border-color: #90299C;
 }
 
+#button0 {
+  position: absolute;
+  top: 7%;
+  right: 8%;
+  /* animation: fadeinout 8s linear forwards;
+  transition-delay: 2s; */
+  animation: bounceIn 3s ease-in-out ;
+}
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+}
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(01);
+  }
+  }
+/* @keyframes fadeinout{
+  0%,50%{opacity: 0;}
+  50%, 100%{opacity: 1;}
+} */
+#button1 {
+  position: absolute;
+  top:67%;
+  right: 16%;
+  animation: bounceIn 6s ease-in-out ;
+}
+#button2 {
+  position: absolute;
+  top: 61%;
+  left: 10%;
+  animation: bounceIn 3s ease-in-out;
+}
+#button3 {
+  position: absolute;
+  top: 42%;
+  right: 41%;
+  animation: bounceIn 2s ease-in-out;
+}
+#button4 {
+  position: absolute;
+  top: 24%;
+  left: 7%;
+  animation: bounceIn 4s ease-in-out;
+}
+#button5 {
+  position: absolute;
+  top: 0%;
+  right: 55%;
+  animation: bounceIn 1s ease-in-out;
+}
