@@ -3,6 +3,15 @@ let selectedObject = [];
 let score = 0;
 let questionNumber = 1;
 
+let ua = navigator.userAgent.toLowerCase(); 
+if (ua.indexOf('safari') != -1) { 
+  if (ua.indexOf('chrome') > -1) {
+    document.getElementById("score-section").id = "score-section"; // Chrome
+  } else {
+    document.getElementById("score-section").id = "score-section-safari"; // Safari
+  }
+}
+
 fetch('preguntas.json')
     .then(response => response.json())
     .then((responseJson) => {
